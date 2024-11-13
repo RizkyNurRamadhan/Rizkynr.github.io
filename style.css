@@ -499,7 +499,7 @@ section {
 }
 
 .up{
-    background: var(--bg-color);
+    background: #081b29;
     border-radius: .4rem;
     transition: .3s;
 }
