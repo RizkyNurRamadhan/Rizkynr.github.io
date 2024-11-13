@@ -494,6 +494,11 @@ section {
     display: flex;
     justify-content: space-around;
 }
+
+.container-footer h4{
+    padding-top: 3px;
+}
+
 .container-footer h4 i{
     color: red;
 }
