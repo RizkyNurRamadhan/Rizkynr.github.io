@@ -294,37 +294,54 @@ section {
 
 }
 
-.circle1, .circle2 {
+.orbit {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 28rem;
-    height: 28rem;
-    border-radius: 50%;
+    width: 30rem;
+    height: 30rem;
     transform: translate(-50%, -50%);
-    border: 2px solid transparent;
+    border-radius: 50%;
     pointer-events: none;
     z-index: 0;
 }
 
-.circle1 {
-    border-top: 2px solid var(--main-color);
-    border-right: 2px solid var(--main-color);
-    animation: rotate1 6s linear infinite;
+.orbit1::before,
+.orbit2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid transparent;
 }
 
-.circle2 {
-    border-bottom: 2px solid var(--main-color);
-    border-left: 2px solid var(--main-color);
-    animation: rotate2 8s linear infinite reverse;
+.orbit1::before {
+    border-top: 3px solid var(--main-color);
+    border-right: 3px solid var(--main-color);
+    transform: rotate(45deg);
 }
 
-@keyframes rotate1 {
+.orbit2::before {
+    border-bottom: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+    transform: rotate(-45deg);
+}
+
+.orbit1 {
+    animation: spin1 5s linear infinite;
+}
+
+.orbit2 {
+    animation: spin2 8s linear infinite reverse;
+}
+
+@keyframes spin1 {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-@keyframes rotate2 {
+@keyframes spin2 {
     0% { transform: translate(-50%, -50%) rotate(360deg); }
     100% { transform: translate(-50%, -50%) rotate(0deg); }
 }
