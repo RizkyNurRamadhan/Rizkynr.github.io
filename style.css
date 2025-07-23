@@ -294,6 +294,42 @@ section {
 
 }
 
+.circle1, .circle2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid transparent;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.circle1 {
+    border-top: 2px solid var(--main-color);
+    border-right: 2px solid var(--main-color);
+    animation: rotate1 6s linear infinite;
+}
+
+.circle2 {
+    border-bottom: 2px solid var(--main-color);
+    border-left: 2px solid var(--main-color);
+    animation: rotate2 8s linear infinite reverse;
+}
+
+@keyframes rotate1 {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotate2 {
+    0% { transform: translate(-50%, -50%) rotate(360deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+
 
 /* ----------------------------------------------------------------- akhir about -------------------------------------------------------------------- */
 
