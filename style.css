@@ -377,6 +377,17 @@ section {
   100% { transform: translate(-50%, -50%) rotate(0deg); }
 }
 
+.orbit1 {
+  width: 24rem;
+  height: 24rem;
+}
+
+.orbit2 {
+  width: 26rem;
+  height: 26rem;
+}
+
+
 
 
 
