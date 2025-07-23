@@ -201,7 +201,7 @@ section {
     color: var(--main-color);
 }
 
-.about-img {
+/* .about-img {
     position: relative;
     width: 18rem;
     height: 18rem;
@@ -223,9 +223,9 @@ section {
     border: 4px solid var(--bg-color);
     position: relative;
     z-index: 2;
-}
+} */
 
-.about-img .circle-spin{
+/* .about-img .circle-spin{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -238,7 +238,7 @@ section {
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
 
-}
+} */
 
 .about-content{
     text-align: center;
@@ -301,58 +301,82 @@ section {
 
 }
 
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 24rem;
-    height: 24rem;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 0;
+.about-img {
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  z-index: 1;
 }
 
-/* Orbit melengkung */
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bg-color);
+  z-index: 2;
+  position: relative;
+}
+
+/* Orbit styling */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24rem;
+  height: 24rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .orbit1::before,
 .orbit2::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 3px solid transparent;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid transparent;
 }
 
 .orbit1::before {
-    border-top: 3px solid var(--main-color);
-    border-right: 3px solid var(--main-color);
-    transform: rotate(45deg);
+  border-top: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
+  transform: rotate(45deg);
 }
 
 .orbit2::before {
-    border-bottom: 3px solid var(--main-color);
-    border-left: 3px solid var(--main-color);
-    transform: rotate(-45deg);
+  border-bottom: 3px solid var(--main-color);
+  border-left: 3px solid var(--main-color);
+  transform: rotate(-45deg);
 }
 
 /* Animasi putar */
 .orbit1 {
-    animation: spin1 6s linear infinite;
+  animation: spin1 6s linear infinite;
 }
 .orbit2 {
-    animation: spin2 8s linear infinite reverse;
+  animation: spin2 8s linear infinite reverse;
 }
 
 @keyframes spin1 {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 @keyframes spin2 {
-    0% { transform: translate(-50%, -50%) rotate(360deg); }
-    100% { transform: translate(-50%, -50%) rotate(0deg); }
+  0% { transform: translate(-50%, -50%) rotate(360deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
 }
+
 
 
 
